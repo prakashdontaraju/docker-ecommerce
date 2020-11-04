@@ -111,7 +111,7 @@ def write_to_mysql(mysqlConnection, table_name, user_sessions_spDF):
 def main():
 
     parser = argparse.ArgumentParser(
-        description='Perform Batch processing to send session data to Redis')
+        description='Perform Batch processing to send session data to MySQL')
 
     parser.add_argument(
         '--input',
