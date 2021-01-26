@@ -5,7 +5,7 @@ from cassandra.cluster import Cluster
 logging.basicConfig(level=logging.INFO)
 
 def cassandra_connection(port):
-    """Connection object for Cassandra"""
+    """Creates Connection object for Cassandra."""
 
     cluster = Cluster(['127.0.0.1'], port=port)
     session = cluster.connect()
@@ -18,13 +18,12 @@ def cassandra_connection(port):
     return cluster, session
 
 
-
 def close_cassandra_connection(cluster, session):
+    """Closes Cassandra connection."""
 
     logging.info('Closing connection to Cassandra')
     session.shutdown()
     cluster.shutdown()
-
     
 
 if __name__ == "__main__":

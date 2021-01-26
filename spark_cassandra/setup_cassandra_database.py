@@ -1,13 +1,12 @@
-import logging
 import argparse
+import logging
 from connect_to_cassandra import cassandra_connection, close_cassandra_connection
 
 
 logging.basicConfig(level=logging.INFO)
 
-
 def create_tables(cluster, session, table):
-
+    """Creates Cassandra Table."""
 
     drop_table_if_exists = 'DROP TABLE IF EXISTS {table}'.format(table=table)
     session.execute(drop_table_if_exists)
@@ -36,9 +35,8 @@ def create_tables(cluster, session, table):
     # close_cassandra_connection(cluster, session)
 
 
-
 def delete_tables(cluster, session, table):
-
+    """Deletes Cassandra Table."""
 
     logging.info('Deleting Batch Processing table in Cassandra')
     drop_table = 'DROP TABLE {table}'.format(table=table)
@@ -47,11 +45,8 @@ def delete_tables(cluster, session, table):
     close_cassandra_connection(cluster, session)
 
 
-
 def main():
-    """
-    Main script that tears down and rebuilds the tables within Cassandra
-    """
+    """Connect to Cassandra server and setup table."""
 
     parser = argparse.ArgumentParser(
         description='Create Cassandra Table to Perform Batch Processing')
@@ -72,8 +67,6 @@ def main():
         create_tables(cluster, session, table)
         # delete_tables(cluster, session, table)
         
-    
-
 
 if __name__ == "__main__":
     main()
