@@ -13,7 +13,7 @@ from pyspark.sql.types import FloatType, StringType, TimestampType
 
 
 def get_product_information(row, product_attributes):
-    """Cleans event details and product information"""
+    """Cleans event details and product information."""
 
     # fill_category_details = [np.nan, np.nan, np.nan, np.nan]
     row = row.asDict()

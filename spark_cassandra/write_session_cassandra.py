@@ -12,7 +12,7 @@ from connect_to_cassandra import cassandra_connection , close_cassandra_connecti
 
 
 def get_product_information(row, product_attributes):
-    """Cleans event details and product information"""
+    """Cleans event details and product information."""
 
     category_code = row.category_code
     details = category_code.split('.')
@@ -70,7 +70,6 @@ def insert_records(session, user_sessions_df, prepared_sessions):
 def write_to_cassandra(session, cluster, user_sessions_rdd):
     """Prepares query to write into Cassandra table."""
 
-    # use random number rather than uuid (it's long - storage capacity)
     query_insert_session_data = "INSERT INTO batch_data " \
                 "(event_time, event_type, product_id, category_id, category_code, brand, price, user_id, user_session, event_details, record_id) " \
                                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
@@ -123,8 +122,6 @@ def main():
         user_sessions_rdd = transform_data(
             sqlContext, user_sessions_chunk_df, product_attributes)
         # print(user_sessions_rdd.take(5))
-        # example1 = user_sessions_rdd.first()
-        # print(example1['category_code'])
         logging.info('Loading Data from the Batch into batch_data Table')
         write_to_cassandra(session, cluster, user_sessions_rdd)
 

@@ -12,7 +12,7 @@ from pyspark.sql.types import FloatType, TimestampType
 
 
 def get_product_information(row, product_attributes):
-    """Cleans event details and product information"""
+    """Cleans event details and product information."""
 
     category_code = row.category_code
     details = category_code.split('.')
@@ -48,7 +48,7 @@ def transform_data(sqlContext, user_sessions_chunk_df, product_attributes):
     return user_sessions_spDF
 
 
-def write_to_redis(redisConnection, user_sessions_spDF):
+def write_to_redis(redis_connection, user_sessions_spDF):
     """Writes dataframe into Redis table."""
 
     user_sessions = user_sessions_spDF.toPandas()
@@ -58,21 +58,21 @@ def write_to_redis(redisConnection, user_sessions_spDF):
         
         hash_name = row['event_details'] + ' | ' + str(index+1)        
 
-        redisConnection.hset(hash_name, 'event_time', str(row['event_time']))
-        redisConnection.hset(hash_name, 'event_type', row['event_type'])
-        redisConnection.hset(hash_name, 'product_id', row['product_id'])
-        redisConnection.hset(hash_name, 'category_id', row['category_id'])
-        redisConnection.hset(hash_name, 'category_code', row['category_code'])
-        redisConnection.hset(hash_name, 'brand', row['brand'])
-        redisConnection.hset(hash_name, 'price', row['price'])
-        redisConnection.hset(hash_name, 'user_id', row['user_id'])
-        redisConnection.hset(hash_name, 'user_session', row['user_session'])
+        redis_connection.hset(hash_name, 'event_time', str(row['event_time']))
+        redis_connection.hset(hash_name, 'event_type', row['event_type'])
+        redis_connection.hset(hash_name, 'product_id', row['product_id'])
+        redis_connection.hset(hash_name, 'category_id', row['category_id'])
+        redis_connection.hset(hash_name, 'category_code', row['category_code'])
+        redis_connection.hset(hash_name, 'brand', row['brand'])
+        redis_connection.hset(hash_name, 'price', row['price'])
+        redis_connection.hset(hash_name, 'user_id', row['user_id'])
+        redis_connection.hset(hash_name, 'user_session', row['user_session'])
 
 
-def clear_redis_database(redisConnection):
+def clear_redis_database(redis_connection):
     """Deletes Redis Table."""
 
-    redisConnection.flushdb()
+    redis_connection.flushdb()
 
 
 def main():
@@ -105,9 +105,9 @@ def main():
     sqlContext = SQLContext(sc)
 
     logging.info('Initializing Redis Connection')
-    redisConnection = redis.Redis(host='127.0.0.1', port=args.port, db=0)
+    redis_connection = redis.Redis(host='127.0.0.1', port=args.port, db=0)
 
-    clear_redis_database(redisConnection)
+    clear_redis_database(redis_connection)
 
     product_attributes = ['category', 'sub_category',
     'product','product_details']
@@ -121,14 +121,14 @@ def main():
         # print(user_sessions_spDF.show(n=5))
         # print(column_names)
 
-        logging.info('Loading DF Data from the Batch into batch_data Table')
-        write_to_redis(redisConnection, user_sessions_spDF)
-
-    logging.info(
-        'Finished Loading DF Data from all Batches into batch_data Table')
+        logging.info('Loading DF Data from the Batch into Redis Database')
+        write_to_redis(redis_connection, user_sessions_spDF)
     
-    # Clear Redis Database
-    # clear_redis_database(redisConnection)
+    logging.info(
+        'Finished Loading DF Data from all Batches into Redis Database')
+    
+    # Deletes Redis Database
+    # clear_redis_database(redis_connection)
 
 
 if __name__ == '__main__':
