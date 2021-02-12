@@ -2,13 +2,16 @@
 
 ## Business Case
 
-To deploy simple viable batch pipelines entirely on Docker with Cassandra, Redis and MySQL databases
+Our customers (subscribers) seek help to build skills to deploy simple and viable batch pipelines entirely on Docker involving the following relational and NoSQL databases:
+* Cassandra
+* MySQL
+* Redis
+
+(I finished the successful implementation of this project. I'm now working on documentation in the sections that follow as well as sharing my learnings and Apache Spark (pyspark) expertise through my [blog.](https://bit.ly/PrakashDontarajuMedium))
  
 ### Focus
 
 I successfully engineered batch data processing pipelines entirely on Docker. I ingested, processed and visualized the data in the database to validate successful deployment.
-
-(I finished the programming part of my project. I'm now working on GitHub documentation as well as sharing my learnings and Apache Spark (pyspark) through my [blog](https://bit.ly/PrakashDontarajuMedium))
 
 ## Data
 
