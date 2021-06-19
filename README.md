@@ -6,13 +6,12 @@ Our customers (subscribers) seek help to build skills to deploy simple and viabl
 * Cassandra
 * MySQL
 * Redis
-
  
 ### Focus
 
-I successfully engineered 3 batch data processing pipelines entirely on Docker.
+I successfully engineered 3 batch data processing pipelines with PySpark while having the databases entirely on Docker.
 
-I ingested, pre-processed and visualized the data in the database to validate their successful deployment.
+I ingested, pre-processed and visualized the data in these databases to validate their successful deployment.
 
 ## Data
 
@@ -33,9 +32,24 @@ However, the real business data I work with at my company and in most other situ
     * cart
     * purchase
 
+Here's the distribution of events in the data:
+
 ![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/data/event_types.PNG)
 
-## Batch Pipelines Implementation
+## Batch Pipelines 
+
+### Metrics Analyzed
+
+    * Purchase conversion rate
+    * Purchase conversion volume
+    * Top 20 brands purchased
+    * Purchase category vs Volume
+    * Hour vs Event Type vs Price
+    * Most visited sub-categories
+    * Views by category
+    * Daily event count
+
+### Pipelines Implementation
 
 ![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/docker_pipeline.PNG)
 
