@@ -7,31 +7,37 @@ Our customers (subscribers) seek help to build skills to deploy simple and viabl
 * MySQL
 * Redis
 
-(I finished the successful implementation of this project. I'm now working on documentation in the sections that follow as well as sharing my learnings and Apache Spark (pyspark) expertise through my [blog.](https://medium.com/@wittygrit))
  
 ### Focus
 
-I successfully engineered batch data processing pipelines entirely on Docker. I ingested, processed and visualized the data in the database to validate successful deployment.
+I successfully engineered 3 batch data processing pipelines entirely on Docker.
+
+I ingested, pre-processed and visualized the data in the database to validate their successful deployment.
 
 ## Data
 
-Include e-commerce details from Kaggle with link. Data is well structured, formatted and hence requires minimal cleaning. T chose this because my focus was on successfully constructing the pipeline and not cleaning data. I still do a little pre-processing of data. Real life data requires a lot of pre-processing.
+I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) data to focus on successfully implementing the 3 batch pipelines.
+
+However, the real business data I work with at my company and in most other situations requires more pre-processing than what I allowed myself to do in this project.
 
 ### Properties of data
 
-Provide explanation of columns, Repetitions, Transformations, Duration of data, creating a data sample.
+ Data file contains behavior data for a 1 month (November 2019) from a large multi-category online store.
+ 
+ Each row in the file represents an event.
+
+* All events are related to products and users
+
+* There are 3 different types of events
+    * view
+    * cart
+    * purchase
+
+![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/data/event_types.png)
 
 ## Batch Pipelines Implementation
 
-Batch data processing, pyspark for batch data processing, business advantage of docker implementation, docker & kubernetes, thought process in selecting databases, challenges during implementation, visualizing data in the database
-
-## Deployment
-
-Detail: Instructions to implement the pipelines with the files readily available
-
-## Next Steps
-
-Use different databases in the same pipeline for different purposes using same data, scheduling these jobs on docker with airflow
+![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/docker_pipeline.png)
 
 ## Connect With Me
 **Prakash Dontaraju** [LinkedIn](https://www.linkedin.com/in/prakashdontaraju) [Twitter](https://twitter.com/WittyGrit) [Medium](https://medium.com/@wittygrit)
