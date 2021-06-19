@@ -33,11 +33,11 @@ However, the real business data I work with at my company and in most other situ
     * cart
     * purchase
 
-![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/data/event_types.png)
+![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/data/event_types.PNG)
 
 ## Batch Pipelines Implementation
 
-![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/docker_pipeline.png)
+![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/docker_pipeline.PNG)
 
 ## Connect With Me
 **Prakash Dontaraju** [LinkedIn](https://www.linkedin.com/in/prakashdontaraju) [Twitter](https://twitter.com/WittyGrit) [Medium](https://medium.com/@wittygrit)
