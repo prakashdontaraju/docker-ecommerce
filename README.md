@@ -17,7 +17,7 @@ I ingested, pre-processed and visualized the data in these databases to validate
 
 I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) data to focus on successfully implementing the 3 batch pipelines.
 
-However, the real business data I work with at my company and in most other situations requires more pre-processing than what I allowed myself to do in this project.
+However, the business data I work with at my company and in most other environments requires more pre-processing than this data.
 
 ### Properties of data
 
@@ -38,20 +38,34 @@ Here's the distribution of events in the data:
 
 ## Batch Pipelines 
 
-### Metrics Analyzed
+### Analysis
 
-    * Purchase conversion rate
-    * Purchase conversion volume
-    * Top 20 brands purchased
-    * Purchase category vs Volume
-    * Hour vs Event Type vs Price
-    * Most visited sub-categories
-    * Views by category
-    * Daily event count
+I performed the following analyses on the pre-processed store data
+
+* Purchase conversion rate
+
+* Purchase conversion volume
+
+* Top 20 brands purchased
+
+* Purchase category vs Volume
+
+* Hour vs Event Type vs Price
+
+* Most visited sub-categories
+
+* Views by category
+
+* Daily event count
+
 
 ### Pipelines Implementation
 
 ![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/docker_pipeline.PNG)
 
-## Connect With Me
+## Acknowledgement
+
+All data, I based my analysis on, is colleced by and belongs to [Open CDP](https://rees46.com/en/open-cdp) project.
+
+## Connect with me
 **Prakash Dontaraju** [LinkedIn](https://www.linkedin.com/in/prakashdontaraju) [Twitter](https://twitter.com/WittyGrit) [Medium](https://medium.com/@wittygrit)
