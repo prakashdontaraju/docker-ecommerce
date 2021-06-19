@@ -15,7 +15,7 @@ I ingested, pre-processed and visualized the data in these databases to validate
 
 ## Data
 
-I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) data to focus on successfully implementing the 3 batch pipelines.
+I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) available on Kaggle to focus on successfully implementing the 3 batch pipelines.
 
 However, the business data I work with at my company and in most other environments requires more pre-processing than this data.
 
@@ -27,10 +27,11 @@ However, the business data I work with at my company and in most other environme
 
 * All events are related to products and users
 
-* There are 3 different types of events
-    * view
-    * cart
-    * purchase
+* There are 3 different types of events &#8594; view, cart and purchase
+
+The 2 purchase funnels are
+* view &#8594; cart &#8594; purchase
+* view &#8594; purchase
 
 Here's the distribution of events in the data:
 
@@ -65,7 +66,7 @@ I performed the following analyses on the pre-processed store data
 
 ## Acknowledgement
 
-All data, I based my analysis on, is colleced by and belongs to [Open CDP](https://rees46.com/en/open-cdp) project.
+All data, I based my analysis on, is collected by and belongs to [Open CDP](https://rees46.com/en/open-cdp) project.
 
 ## Connect with me
-**Prakash Dontaraju** [LinkedIn](https://www.linkedin.com/in/prakashdontaraju) [Twitter](https://twitter.com/WittyGrit) [Medium](https://medium.com/@wittygrit)
+**Prakash Dontaraju** [LinkedIn](https://www.linkedin.com/in/prakashdontaraju) [Twitter](https://twitter.com/WittyGrit) [Medium](https://wittygrit.medium.com/)
