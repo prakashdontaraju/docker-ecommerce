@@ -21,7 +21,7 @@ I plan to write a blog post about how to deploy these 3 batch pipelines on Docke
 
 ## Data
 
-I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) available on Kaggle to focus on successfully implementing the 3 batch pipelines.
+I chose the eCommerce behavior data from multi category store available on Kaggle to focus on successfully implementing the 3 batch pipelines.
 
 Real business data requires more pre-processing than the transformations I performed with this data.
 
