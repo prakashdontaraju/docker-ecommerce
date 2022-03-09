@@ -53,7 +53,7 @@ Cassandra
 
 MySQL
 
-![MySQL](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_sql/docker_mysql.png)
+![MySQL](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_mysql/docker_mysql.png)
 
 Redis
 
