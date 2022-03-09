@@ -1,4 +1,4 @@
-# docker-ecommerce
+# Batch Pipeline On Docker To Easily Know Customer Purchasing Behaviors
 
 ## Business Case
 
@@ -35,34 +35,48 @@ The 2 purchase funnels are
 
 Here's the distribution of events in the data:
 
-![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/data/event_types.PNG)
+![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/event_types.PNG)
 
 ## Batch Pipelines 
+
+### Implementation
+
+![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/docker_pipeline.PNG)
+
+### Storage
+
+Cassandra
+
+![Cassandra](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_cassandra/docker_cassandra.PNG)
+
+MySQL
+
+![MySQL](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_sql/docker_mysql.PNG)
+
+Redis
+
+![Redis](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_redis/docker_redis.PNG)
 
 ### Analysis
 
 I performed the following analyses on the pre-processed store data
 
-* Purchase conversion rate
+* Views by category
 
-* Purchase conversion volume
-
-* Top 20 brands purchased
+![Views By Category](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/views_by_category.PNG)
 
 * Purchase category vs Volume
 
-* Hour vs Event Type vs Price
+![Purchase category vs Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_category_vs_volume.PNG)
 
-* Most visited sub-categories
+* Top 20 brands purchased
 
-* Views by category
+![Top 20 Brands Purchased](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/top20_brands_purchased.PNG)
 
-* Daily event count
+* Purchase conversion volume
 
+![Purchase Conversion Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_conversion_volume.PNG)
 
-### Pipelines Implementation
-
-![Batch Pipelines Implementation](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/docker_pipeline.PNG)
 
 ## Acknowledgement
 
