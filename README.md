@@ -37,6 +37,8 @@ Here's the distribution of events in the data:
 
 ![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/event_types.PNG)
 
+
+
 ## Batch Pipelines 
 
 ### Implementation
@@ -47,15 +49,15 @@ Here's the distribution of events in the data:
 
 Cassandra
 
-![Cassandra](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_cassandra/docker_cassandra.PNG)
+![Cassandra](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_cassandra/docker_cassandra.png)
 
 MySQL
 
-![MySQL](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_sql/docker_mysql.PNG)
+![MySQL](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_sql/docker_mysql.png)
 
 Redis
 
-![Redis](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_redis/docker_redis.PNG)
+![Redis](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_redis/docker_redis.png)
 
 ### Analysis
 
@@ -63,19 +65,19 @@ I performed the following analyses on the pre-processed store data
 
 * Views by category
 
-![Views By Category](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/views_by_category.PNG)
+![Views By Category](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/views_by_category.png)
 
 * Purchase category vs Volume
 
-![Purchase category vs Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_category_vs_volume.PNG)
+![Purchase category vs Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_category_vs_volume.png)
 
 * Top 20 brands purchased
 
-![Top 20 Brands Purchased](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/top20_brands_purchased.PNG)
+![Top 20 Brands Purchased](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/top20_brands_purchased.png)
 
 * Purchase conversion volume
 
-![Purchase Conversion Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_conversion_volume.PNG)
+![Purchase Conversion Volume](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/purchase_conversion_volume.png)
 
 
 ## Acknowledgement
