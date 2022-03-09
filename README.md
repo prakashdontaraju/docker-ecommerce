@@ -7,21 +7,27 @@ Our customers (subscribers) seek help to build skills to deploy simple and viabl
 * MySQL
 * Redis
  
-### Focus
+### Results
 
 I successfully engineered 3 batch data processing pipelines with PySpark while having the databases entirely on Docker.
 
 I ingested, pre-processed and visualized the data in these databases to validate their successful deployment.
 
+I also analyzed customer purchasing behavior.
+
+### Deployment
+
+I plan to write a blog post about how to deploy these 3 batch pipelines on Docker soon. Stay tuned!
+
 ## Data
 
 I chose the [eCommerce behavior data from multi category store](https://www.kaggle.com/mkechinov/ecommerce-behavior-data-from-multi-category-store) available on Kaggle to focus on successfully implementing the 3 batch pipelines.
 
-However, the business data I work with at my company and in most other environments requires more pre-processing than this data.
+Real business data requires more pre-processing than the transformations I performed with this data.
 
 ### Properties of data
 
- Data file contains behavior data for a 1 month (November 2019) from a large multi-category online store.
+ Data file contains customer behavior data on a large multi-category online store's website for 1 month (November 2019).
  
  Each row in the file represents an event.
 
@@ -38,8 +44,7 @@ Here's the distribution of events in the data:
 ![Event Types](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/analysis/event_types.PNG)
 
 
-
-## Batch Pipelines 
+## Batch Pipelines on Docker
 
 ### Implementation
 
@@ -59,9 +64,9 @@ Redis
 
 ![Redis](https://github.com/prakashdontaraju/docker-ecommerce/blob/main/pyspark_redis/docker_redis.png)
 
-### Analysis
+## Analysis
 
-I performed the following analyses on the pre-processed store data
+I performed the following analyses on the pre-processed (transformed) data in storage
 
 * Views by category
 
